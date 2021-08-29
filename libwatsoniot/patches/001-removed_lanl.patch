@@ -1,0 +1,13 @@
+--- a/Makefile
++++ b/Makefile
+@@ -323,7 +323,8 @@ paho-mqtt-download:
+ 
+ paho-mqtt-build:
+ 	echo "Build paho mqtt c"
+-	make -C paho.mqtt.c
++	echo "Building with disabled lib anl"
++	make GAI_LIB='' -C paho.mqtt.c
+ 
+ tests:
+ 	make -C test
+
